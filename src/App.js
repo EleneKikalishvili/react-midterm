@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Dashboard from "./components/Dashboard/UserDashboard";
 import { AuthContext } from "./context/context";
-import LoginForm from "./components/Login";
 import Users from "./components/User/UserList";
 import "./App.css";
 

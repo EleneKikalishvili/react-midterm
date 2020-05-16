@@ -17,9 +17,19 @@ function UserList() {
       });
   }, []);
 
+  const emails = Users.map((user) => {
+    return user.email;
+  });
+
+  const ids = Users.map((user) => {
+    return user.id;
+  });
+
+  console.log(emails);
+
   return (
     <div>
-      <Login emails={Users.email} ids={Users.id} />
+      <Login emails={emails} ids={ids} />
     </div>
   );
 }

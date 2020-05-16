@@ -3,11 +3,11 @@ import { useForm } from "react-hook-form";
 
 import { AuthContext } from "../../context/context";
 
-function Login(props) {
+function Login({ emails, ids }) {
   const Auth = useContext(AuthContext);
   const { register, errors, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    if (data["username"] === "Kikalishvili") {
+    if (emails.includes(data["email"])) {
       Auth.login();
     }
   };
@@ -22,7 +22,7 @@ function Login(props) {
           id="exampleInputEmail1"
           ref={register({ required: true, minLength: 7 })}
           aria-describedby="emailHelp"
-          name="username"
+          name="email"
         />
         {errors.username && errors.username.type === "required" && (
           <small id="emailHelp" className="form-text " style={{ color: "red" }}>
