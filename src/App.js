@@ -11,6 +11,7 @@ function App() {
     <div className="container">
       {auth.isAuth && <Dashboard />}
       {!auth.isAuth && <LoginForm />}
+      <Users />
     </div>
   );
 }
