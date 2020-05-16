@@ -10,8 +10,7 @@ function App() {
   return (
     <div className="container">
       {auth.isAuth && <Dashboard />}
-      {!auth.isAuth && <LoginForm />}
-      <Users />
+      {!auth.isAuth && <Users />}
     </div>
   );
 }

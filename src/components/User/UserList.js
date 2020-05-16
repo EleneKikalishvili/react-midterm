@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Login from "../Login";
 
 function UserList() {
   const [Users, setUsers] = useState([]);
@@ -16,7 +17,11 @@ function UserList() {
       });
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <Login emails={Users.email} ids={Users.id} />
+    </div>
+  );
 }
 
 export default UserList;
